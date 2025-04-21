@@ -4,9 +4,11 @@ const path = require("path");
 const dotenv = require("dotenv");
 const Project = require("./components/User/project");
 const Skill = require("./components/User/skills");
+const cors=require('cors')
 dotenv.config();
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 8888;
 
 // MongoDB connection
